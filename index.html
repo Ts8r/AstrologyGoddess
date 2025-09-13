@@ -1,10 +1,246 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UFT-8">
-    <title>Astrology Goddess</title>
-    <link rel="icon" type="image/x-icon" href="img6/favicon.ico">
-   
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Astrology Goddess — Guidance & Cartomancie</title>
+  <meta name="description" content="Astrology Goddess : lectures astrologiques, thèmes astraux, compatibilité amoureuse et guidance spirituelle. Réservez une séance en ligne." />
+  <link rel="canonical" href="https://ts8r.github.io/AstrologyGoddess/" />
 
+  <!-- Favicons (déjà ajoutés dans le repo) -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-64x64.png" sizes="64x64" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Astrology Goddess — Guidance & Cartomancie" />
+  <meta property="og:description" content="Lectures astrologiques, thèmes astraux, compatibilité et guidance spirituelle." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ts8r.github.io/AstrologyGoddess/" />
+  <meta property="og:image" content="img/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Astrology Goddess",
+    "url": "https://ts8r.github.io/AstrologyGoddess/",
+    "logo": "https://ts8r.github.io/AstrologyGoddess/favicon-64x64.png",
+    "sameAs": [
+      "https://www.instagram.com/astrologygoddess",
+      "https://www.facebook.com/astrologygoddess"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#070b16;            /* bleu nuit */
+      --card:#0d1426;          /* carte */
+      --gold:#d6b16b;          /* doré doux */
+      --text:#e7eaf3;
+      --muted:#a9b0c7;
+      --radius:16px;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 70% -10%, #10203a, transparent 60%), var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:10;background:rgba(7,11,22,.72);backdrop-filter: blur(10px); border-bottom:1px solid rgba(255,255,255,.06)}
+    .container{max-width:1100px;margin-inline:auto;padding:16px}
+    .row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    nav a{color:var(--text);text-decoration:none;margin:0 10px;opacity:.9}
+    nav a:hover{color:var(--gold)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.5px}
+    .brand img{width:32px;height:32px;border-radius:8px}
+    .btn{appearance:none;border:1px solid var(--gold);color:var(--bg);background:var(--gold);padding:10px 16px;border-radius:999px;font-weight:600;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--gold)}
+
+    /* Hero */
+    .hero{padding:72px 16px 48px;background:
+      radial-gradient(800px 400px at 20% -10%, rgba(214,177,107,.12), transparent 60%),
+      radial-gradient(1000px 600px at 80% -20%, rgba(214,177,107,.10), transparent 70%)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 22px}
+    .starfield{position:relative;border-radius:var(--radius);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));padding:20px;box-shadow:var(--shadow)}
+    .starfield::before{content:"";position:absolute;inset:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><g fill="white" opacity="0.5"><circle cx="20" cy="40" r="1"/><circle cx="200" cy="60" r="1"/><circle cx="160" cy="140" r="1"/><circle cx="80" cy="200" r="1"/><circle cx="260" cy="220" r="1"/><circle cx="120" cy="260" r="1"/></g></svg>') repeat;opacity:.35;border-radius:var(--radius)}
+    .hero-illustration{display:flex;align-items:center;justify-content:center}
+    .logo-card{background:var(--card);border:1px solid rgba(255,255,255,.06);padding:22px;border-radius:20px;box-shadow:var(--shadow)}
+    .logo-card img{display:block;max-width:220px;height:auto}
+
+    /* Sections */
+    section{padding:56px 16px}
+    h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 8px}
+    .muted{color:var(--muted);margin:0 0 24px}
+
+    .grid{display:grid;gap:18px}
+    .grid.col-3{grid-template-columns:repeat(3,1fr)}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+    .pill{display:inline-block;border:1px solid rgba(255,255,255,.18);padding:4px 10px;border-radius:999px;color:var(--gold);font-weight:600;margin-bottom:10px}
+
+    /* About */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .about img{width:100%;border-radius:var(--radius);border:1px solid rgba(255,255,255,.08)}
+
+    /* Testimonials */
+    .testimonial{border-left:3px solid var(--gold);padding:12px 16px;background:rgba(214,177,107,.05);border-radius:10px;margin:10px 0}
+    .quote{font-style:italic}
+
+    /* Contact */
+    form{display:grid;gap:12px;max-width:520px}
+    input,textarea{background:#0b1222;color:var(--text);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:12px}
+    input:focus, textarea:focus{outline:2px solid var(--gold);}
+
+    footer{padding:28px 16px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+      .grid.col-3{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header aria-label="En-tête du site">
+    <div class="container row">
+      <div class="brand">
+        <img src="favicon-64x64.png" alt="Logo Astrology Goddess" />
+        <span>Astrology Goddess</span>
+      </div>
+      <nav aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#about">À propos</a>
+        <a href="#temoignages">Avis</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn ghost" href="#contact">Réserver</a>
+    </div>
+  </header>
+
+  <section class="hero" id="accueil">
+    <div class="container hero-inner">
+      <div class="starfield">
+        <h1>Guidance astrologique & éclairage de votre chemin</h1>
+        <p>Thème astral complet, compatibilité amoureuse, transit du moment et accompagnement personnalisé. Une approche bienveillante, précise et moderne.</p>
+        <div class="row" style="gap:10px">
+          <a class="btn" href="#contact">Réserver une séance</a>
+          <a class="btn ghost" href="#services">Voir les services</a>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <div class="logo-card" aria-hidden="true">
+          <img src="img/logo.png" alt="Illustration du logo Astrology Goddess" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="muted">Choisissez la séance qui correspond à votre besoin du moment.</p>
+      <div class="grid col-3">
+        <article class="card">
+          <span class="pill">Thème natal</span>
+          <h3>Lecture complète</h3>
+          <p>Votre carte du ciel détaillée : forces, défis, mission d’âme et conseils pratiques.</p>
+          <p><strong>60 min — 60€</strong></p>
+        </article>
+        <article class="card">
+          <span class="pill">Amour</span>
+          <h3>Compatibilité & synastrie</h3>
+          <p>Comprendre la dynamique de votre relation et les clés d’harmonie sur le long terme.</p>
+          <p><strong>45 min — 50€</strong></p>
+        </article>
+        <article class="card">
+          <span class="pill">Guidance</span>
+          <h3>Transits du moment</h3>
+          <p>Point de situation et décisions à venir : travail, émotions, opportunités.</p>
+          <p><strong>30 min — 35€</strong></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about">
+      <div>
+        <h2>À propos</h2>
+        <p class="muted">Une pratique mêlant intuition, technique et bienveillance.</p>
+        <p>Je m’appuie sur l’astrologie traditionnelle et psychologique pour proposer des lectures claires et actionnables. Chaque séance est personnalisée selon votre question et votre contexte.</p>
+        <ul>
+          <li>Rapport PDF envoyé après la séance</li>
+          <li>Enregistrement audio sur demande</li>
+          <li>Suivi par e‑mail 7 jours</li>
+        </ul>
+      </div>
+      <img src="img/astro-session.jpg" alt="Photo d'une séance d'astrologie avec un ciel étoilé" />
+    </div>
+  </section>
+
+  <section id="temoignages">
+    <div class="container">
+      <h2>Témoignages</h2>
+      <div class="testimonial">
+        <p class="quote">“Lecture incroyablement juste, j’ai enfin compris certains schémas récurrents. Merci !”</p>
+        <p>— Lina</p>
+      </div>
+      <div class="testimonial">
+        <p class="quote">“Beaucoup de douceur et des conseils très concrets. Je recommande.”</p>
+        <p>— Sam</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact & Réservation</h2>
+      <p class="muted">Répondez en quelques mots à votre question, je vous recontacte rapidement.</p>
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <label>
+          <span>Votre nom</span>
+          <input name="name" required aria-label="Votre nom" />
+        </label>
+        <label>
+          <span>Votre e‑mail</span>
+          <input type="email" name="email" required aria-label="Votre e‑mail" />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" placeholder="Expliquez votre besoin…" aria-label="Message"></textarea>
+        </label>
+        <button class="btn" type="submit">Envoyer</button>
+        <p class="muted">Ou écrivez‑moi directement : <a href="mailto:contact@astrologygoddess.example" style="color:var(--gold)">contact@astrologygoddess.example</a></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container row" style="justify-content:space-between">
+      <span>© <span id="year"></span> Astrology Goddess — Tous droits réservés</span>
+      <div>
+        <a href="#" aria-label="Instagram" style="color:var(--muted);margin-right:12px">Instagram</a>
+        <a href="#" aria-label="Facebook" style="color:var(--muted)">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mise à jour automatique de l'année
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Accessibilité : focus visible au clavier
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Tab') document.body.classList.add('user-tabbing');
+    });
+  </script>
+</body>
 </html>
